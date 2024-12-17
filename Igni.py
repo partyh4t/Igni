@@ -9,7 +9,7 @@ you'd typically run on most targets.
     # Add logging functionality
     # Create a folder somewhere (likely in /tmp), to store all the files, logs, cmd output, etc
 
-import PortScanner
+from PortScanner import PortScanner
 
 target = input("Enter your target here: ")
 
