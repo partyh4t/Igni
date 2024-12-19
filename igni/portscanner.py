@@ -17,7 +17,8 @@ class PortScanner:
     def parse_nmap_output(self, output_path):
         tree = etree.parse((str(output_path) + ".xml"))
         open_ports = tree.xpath("//port[state/@state='open']/@portid") # extracting open ports with xml.
-        print(open_ports)
+        print("Open ports: " + ', '.join(open_ports))
+        return open_ports
 
         
 

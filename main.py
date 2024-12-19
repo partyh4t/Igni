@@ -11,7 +11,8 @@ you'd typically run on most targets.
     # Add argument parsing
     #
 
-from IgniPortScanner import PortScanner
+from igni.portscanner import PortScanner
+from igni.smb import EnumSmb
 from pathlib import Path
 import argparse
 
@@ -26,7 +27,14 @@ folder_path = Path.home() / "igni_output" / args.target
 folder_path.mkdir(parents=True, exist_ok=True)
 
 def main():
-    targ1 = PortScanner(args.target)
-    targ1.scan_ports()
+    target = PortScanner(args.target)
+    open_ports = target.scan_ports()
+
+    for i in int(open_ports):
+        if i == 445:
+            print("SMB Open. Enumerating File Shares...")
+
+        
+main()
 
     
