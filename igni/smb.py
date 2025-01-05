@@ -4,5 +4,5 @@ class EnumSmb:
     def __init__(self, target):
         self.target = target
     
-    def enum_auth():
+    #def enum_auth():
         
