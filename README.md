@@ -18,3 +18,13 @@ Igni is a bug bounty recon script written in Python to automate some of your typ
   .*#############################:.
   ********************************:.
 ```
+
+## Installation
+using `git`:
+```
+git clone https://github.com/partyh4t/Igni.git
+```
+using `curl`:
+```
+curl -O https://raw.githubusercontent.com/partyh4t/Igni/refs/heads/main/igni.py
+```
